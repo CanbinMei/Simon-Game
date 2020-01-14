@@ -79,6 +79,10 @@ function AddNextSequence() {
 // Initialize the game 1.5 seconds after the game is over.
 function gameOver() {
   $("h1").text("Game Over 💔");
+  $("body").addClass("game-over");
+  setTimeout(function() {
+    $("body").removeClass("game-over");
+  }, 150);
   gameStarted = false;
   setTimeout(function() {
     initializeGame();
